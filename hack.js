@@ -1,6 +1,5 @@
-// NOTE: Don't works in IE!
 console.log('[== Starting hack... ==]');
-
+ 
 var ans = '';
 var confirmans = false;
 var forCookies = {
