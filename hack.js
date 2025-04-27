@@ -3,7 +3,7 @@ console.log('[== Starting hack... ==]');
 
 setInterval(function() {
     Game.Achievements["Cheated cookies taste awful"].won=0
-    Game.Achievements["Third party"].won=0
+    Game.Achievements['Third-party'].won = 0;
 }, 1);
 
 var ans = '';
