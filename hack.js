@@ -3,8 +3,8 @@ console.log('[== Starting hack... ==]');
 
 setInterval(function() {
     Game.Achievements["Cheated cookies taste awful"].won=0
-    Game.AchievementsById["160"].won = 0; 
-}, 1);
+    Game.UpgradesById[160].bought = 0; 
+}, 0);
 
 var ans = '';
 var confirmans = false;
