@@ -1,4 +1,4 @@
-# cookie-clicker-hack
+# cookie-clicker-hack (WIP)
 Note: This is a modified github version of https://greasyfork.org/en/scripts/392425-cookie-clicker-hack<br>
 <br>
 This is specifiaclly a bookmark version of the script, enter this to a bookmarklet<br>
