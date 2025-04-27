@@ -1,6 +1,10 @@
 //This code does not belong, please check README.md
 console.log('[== Starting hack... ==]');
- 
+setInterval(function() {
+    Game.Achievements["Cheated cookies taste awful"].won=0
+    Game.Achievements["Third-party"].won=0
+}, 2000); // 2000 milliseconds = 2 seconds
+
 var ans = '';
 var confirmans = false;
 var forCookies = {
