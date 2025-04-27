@@ -4,4 +4,4 @@ Press H to activate hack<br>
 <br>
 This is specifiaclly a bookmark version of the script<br>
 Enter this code to a bookmarklet
-javascript:(()=>{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/TheUser-90173/cookie-clicker-hack-bookmark@main/hack.js';document.body.appendChild(s)})();
+`javascript:(()=>{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/TheUser-90173/cookie-clicker-hack-bookmark@main/hack.js';document.body.appendChild(s)})();`
