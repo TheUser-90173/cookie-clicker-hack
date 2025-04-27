@@ -1,7 +1,7 @@
 // NOTE: Don't works in IE!
- 
 console.log('[== Starting hack... ==]');
- 
+hackMenu();
+
 var ans = '';
 var confirmans = false;
 var forCookies = {
