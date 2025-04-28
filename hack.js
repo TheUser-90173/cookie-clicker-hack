@@ -317,8 +317,3 @@ ns = prompt('Type of golden cookie:\n1) Random\n2) Frenzy\n3) Dragonflight\n4) B
             }
         }
         ////////////////////////////////////////////////////
-        if (ans === null || ans === "") {
-    console.log('Prevented "Function not found" message');
-} else {
-    alert('Function not found.');
-}
