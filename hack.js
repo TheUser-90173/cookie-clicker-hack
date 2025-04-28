@@ -12,9 +12,9 @@
 // @updateURL https://update.greasyfork.org/scripts/392425/Cookie%20Clicker%20hack.meta.js
 // ==/UserScript==
 
-//^^^For tampermonkey verion^^^
+// ↑↑For tampermonkey verion↑↑
 // NOTE: I am a amateur coder, please help me with my errors :)
-//This code does not belong to me, please check README.md
+// This code does not belong to me, please check README.md
 console.log('[== Starting hack... ==]');
 
 setInterval(function() {
