@@ -1,3 +1,4 @@
+(() => {
 // ==UserScript==
 // @name         Cookie Clicker hack
 // @namespace    https://greasyfork.org/ru/scripts/392425-cookie-clicker-hack
@@ -317,3 +318,4 @@ ns = prompt('Type of golden cookie:\n1) Random\n2) Frenzy\n3) Dragonflight\n4) B
             }
         }
         ////////////////////////////////////////////////////
+    })();
