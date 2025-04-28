@@ -6,3 +6,6 @@ This is specifiaclly a bookmark version of the script, enter this to a bookmarkl
 Press H to activate hack<br>
 <br>
 *Some changes will be made occasionally
+
+### Update 1.01
+Added different types of golden cookies
