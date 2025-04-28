@@ -1,9 +1,25 @@
-//This code does not belong, please check README.md
+// ==UserScript==
+// @name         Cookie Clicker hack
+// @namespace    https://greasyfork.org/ru/scripts/392425-cookie-clicker-hack
+// @version      1.0
+// @license      MIT
+// @description  Just a cookie clicker hack.
+// @author       hasha2982
+// @match        *://orteil.dashnet.org/cookieclicker/*
+// @match        *://orteil.dashnet.org/cookieclicker/
+// @grant        none
+// @downloadURL https://update.greasyfork.org/scripts/392425/Cookie%20Clicker%20hack.user.js
+// @updateURL https://update.greasyfork.org/scripts/392425/Cookie%20Clicker%20hack.meta.js
+// ==/UserScript==
+
+//^^^For tampermonkey verion^^^
+// NOTE: I am a amateur coder, please help me with my errors :)
+//This code does not belong to me, please check README.md
 console.log('[== Starting hack... ==]');
 
 setInterval(function() {
     Game.Achievements["Cheated cookies taste awful"].won=0
-    Game.AchievementsById[160].won = 0;  
+    Game.AchievementsById[160].won = 0;
 }, 0);
 
 var ans = '';
@@ -12,12 +28,12 @@ var forCookies = {
     iter: 0,
     ctr: 0
 };
- 
+
 const hinfo = {
     version: '1.5',
     changes: ''
 };
- 
+
 var ac = {
     sure: false,
     click: function() {
@@ -34,31 +50,31 @@ var ac = {
     },
     warning: false
 };
- 
+
 /*var spawnReindeer = function() {
     var newReindeer = new Game.shimmer('reindeer');
 };*/
- 
+
 var mwheel = {
     active: false,
     active2: false
 };
- 
+
 var getFree = {
     itemName: '',
     wrongItem: false
 };
- 
+
 var buffs = {
     duration: 0,
     pow: 0
 };
- 
+
 var CookiePatcher = {
     patchedGrimoireBackfire: function(spell) {var failChance=0;return failChance;},
     originalGrimoireBackfire: function(spell) {var failChance=0.15;if(Game.hasBuff('Magic adept'))failChance*=0.1;if(Game.hasBuff('Magic inept'))failChance*=5;if(spell.failFunc)failChance=spell.failFunc(failChance);return failChance;} // Taken from original Cookie Clicker v.2.022 code and minified.
 };
- 
+
 document.onkeydown = function(e){
     e = e || window.event;
     var key = e.which || e.keyCode;
@@ -68,9 +84,9 @@ document.onkeydown = function(e){
         ac.termtimer();
     }
 }; // thx StackOverflow
- 
+
 var hmenuText = 'Welcome to hasha2982\'s modified Cookie Clicker hack V1.0 (Modified by Github User "TheUser-90173" ' + '!\nPlease enter a number of the function below:\n1) Earn free cookies\n2) Spawn golden cookies\n3) Autoclicker (tested on Cookie Clicker v.2.022)\n4) Mouse Wheel mode\n5) Buy for Free\n6) Earn Sugar lumps\n7) Gain buffs\n8) Grimoire hacks';
- 
+
 function hackMenu() {
     // if (event.code = 'KeyH') {
         ans = prompt(hmenuText);
@@ -84,24 +100,70 @@ function hackMenu() {
             }
         ///////////////////////////////////////////////////
         } else if (ans == '2') {
-            ans = prompt('How many cookies do you want to spawn?');
+ns = prompt('Type of golden cookie:\n1) Random\n2) Frenzy\n3) Dragonflight\n4) Blab\n5) wrath');
+            //use newShimmer.force = 'effect_type';
+            ///////////////////////////////////////////////////////////////////////////
+            if (ans === '1') ans = prompt('How many cookies do you want to spawn?');
             if (!(ans === "" || ans === null) && Number(ans) > 0) {
                 forCookies.iter = Number(ans);
                 for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
-                    var newShimmer=new Game.shimmer("golden");
-                    console.log(`Golden cookie spawned.\nIteration ${forCookies.ctr} is finished.\nIterations remaining: ${forCookies.iter - forCookies.ctr}`);
+                    new Game.shimmer('golden');
                 }
-                forCookies.iter = 0;
-                forCookies.ctr = 0;
-            } else {
-                alert('Cancelled.');
             }
-        }
+            /////////////////////////////////////////////////////////////////////////////
+            else if (ans === '2') ans = prompt('How many cookies do you want to spawn?');
+            if (!(ans === "" || ans === null) && Number(ans) > 0) {
+                forCookies.iter = Number(ans);
+                for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
+                    new Game.shimmer('golden').force = 'frenzy';
+                }
+            }
+            /////////////////////////////////////////////////////////////////////////////
+            //else if (ans === '3') ans = prompt('How many cookies do you want to spawn?');
+            //if (!(ans === "" || ans === null) && Number(ans) > 0) {
+            //    forCookies.iter = Number(ans);
+            //    for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
+            //        var new Game.shimmer('golden').force = 'wrath'; = wrathCookie
+            //        wrathCookie.force = 'elder_frenzy'
+            //        }
+            //    }
+            //*Help needed here
+            /////////////////////////////////////////////////////////////////////////////
+            else if (ans === '3') ans = prompt('How many cookies do you want to spawn?');
+            if (!(ans === "" || ans === null) && Number(ans) > 0) {
+                forCookies.iter = Number(ans);
+                for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
+                    var newShimmer = new Game.shimmer('golden');
+                    newShimmer.force = 'dragonflight';
+                }
+            }
+            ////////////////////////////////////////////////////////////////////////////
+            else if (ans === '4') ans = prompt('How many cookies do you want to spawn?');
+            if (!(ans === "" || ans === null) && Number(ans) > 0) {
+                forCookies.iter = Number(ans);
+                for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
+                    var newShimmer = new Game.shimmer('golden');
+                    newShimmer.force = 'blab';
+                }
+            }
+            ////////////////////////////////////////////////////////////////////////////
+            else if (ans === '5') ans = prompt('How many cookies do you want to spawn?');
+            if (!(ans === "" || ans === null) && Number(ans) > 0) {
+                forCookies.iter = Number(ans);
+                for (; forCookies.ctr < forCookies.iter; forCookies.ctr++) {
+                    new Game.shimmer('golden').force = 'wrath';
+                }
+            }
+            //else if (ans === '6') function here
+            //else if (ans === '7') function here
+            //else if (ans === '8') function here
+            //else if (ans === '9') function here
         ////////////////////////////////////////////////////
         /*else if (ans === '3') {
             Game.Notify('Note from the hack', 'Reindeer will be spawned in 2 seconds.');
             setTimeout(spawnReindeer, 2000);
         }*/
+        //golden cookies are better...
         ////////////////////////////////////////////////////
         else if (ans == '3') {
             ans = prompt('Enter delay between clicks in ms. (1000 ms. = 1 s.)\n(press \'c\' to disable autoclicker)');
@@ -263,5 +325,5 @@ function hackMenu() {
         }
    // }
 }
- 
+
 console.log('[== Hack is started. ==]\nVersion: v.' + hinfo.version);
